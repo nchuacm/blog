@@ -756,15 +756,15 @@ vendors:
 
 
 # Assets
-css: css
-js: js
-images: images
+css: https://cdn.jsdelivr.net/gh/nchuacm/nchuacm.github.io/css
+js: https://cdn.jsdelivr.net/gh/nchuacm/nchuacm.github.io/js
+images: https://cdn.jsdelivr.net/gh/nchuacm/nchuacm.github.io/images
 
 background:
   # PC端背景图片
-  image_src_1: /images/backgound_1.jpg
+  image_src_1: https://cdn.jsdelivr.net/gh/nchuacm/nchuacm.github.io/images/backgound_1.jpg
   # 手机背景图片
-  image_src_2: /images/backgound_2.jpg
+  image_src_2: https://cdn.jsdelivr.net/gh/nchuacm/nchuacm.github.io/images/backgound_2.jpg
   image_opacity: 0.9
   element_opacity: 0.85
 
@@ -774,7 +774,7 @@ img_mirror:
   prefix: 
 
 card:
-  avatar: /images/avatar.png
+  avatar: https://cdn.jsdelivr.net/gh/nchuacm/nchuacm.github.io/images/avatar.png
   name: nchu acm
   description: 
 
@@ -817,7 +817,7 @@ post_title_num : true
 # 看板娘
 live2d:
   enable: true
-  model: /images/live2d_model/shizuku/index.json # 模型的地址
+  model: https://cdn.jsdelivr.net/gh/nchuacm/nchuacm.github.io/images/live2d_model/shizuku/index.json # 模型的地址
   width: 300 # 控制模型的尺寸比例
   height: 390 # 需要根据不同模型来调整
 
