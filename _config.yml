@@ -3,18 +3,19 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
+title: nchuacm
 subtitle: ''
 description: ''
 keywords:
-author: John Doe
-language: en
+author: nchuacm
+language: zh-Hans
 timezone: ''
 
 # URL
-## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: http://example.com
-permalink: :year/:month/:day/:title/
+## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
+url: http://nchuacm.github.io
+root: /
+permalink: :title/
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -50,11 +51,6 @@ highlight:
   tab_replace: ''
   wrap: true
   hljs: false
-prismjs:
-  enable: false
-  preprocess: true
-  line_number: true
-  tab_replace: ''
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -64,6 +60,16 @@ index_generator:
   path: ''
   per_page: 10
   order_by: -date
+
+archive_generator:
+  per_page: 30
+  yearly: true
+  monthly: false
+
+tag_generator:
+  per_page: 30
+category_generator:
+  per_page: 30
 
 # Category & Tag
 default_category: uncategorized
@@ -80,8 +86,8 @@ meta_generator: true
 ## http://momentjs.com/docs/#/displaying/format/
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
-## updated_option supports 'mtime', 'date', 'empty'
-updated_option: 'mtime'
+## Use post's date for updated date unless set in front-matter
+use_date_for_updated: false
 
 # Pagination
 ## Set per_page to 0 to disable pagination
@@ -94,12 +100,25 @@ include:
 exclude:
 ignore:
 
+# Local search
+# Dependencies: https://github.com/flashlab/hexo-generator-search
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
+
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: sagiri
+# theme: next
+# theme: butterfly
 
 # Deployment
-## Docs: https://hexo.io/docs/one-command-deployment
+## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: ''
+  type: git
+  repo: git@github.com:nchuacm/nchuacm.github.io.git
+  # example, https://github.com/hexojs/hexojs.github.io
+  branch: master
